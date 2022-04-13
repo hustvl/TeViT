@@ -41,7 +41,7 @@ Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
 
 Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-[TeViT R50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
+[TeViT_R50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
 [TeViT_Swin-L_MST](configs/tevit/tevit_swin-l_mstrain.py) | 56.8 | 80.6 | 63.1 | 52.0 | 63.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.zip)
 
 * Due to backbone limitations, TeViT models with `ResNet-50` and `Swin-L` backbone are conducted with `STQI Head` only (i.e., without our proposed `messenger shift mechanism`).
