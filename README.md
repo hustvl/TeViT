@@ -9,9 +9,9 @@
 > (<sup>:email:</sup>) corresponding author.
 >
 
-* This repo provides code, models and training/inference recipes for **TeViT**(Temporally Efficient Vision Transformer for Video Instance Segmentation)
+* This repo provides code, models and training/inference recipes for **TeViT**(Temporally Efficient Vision Transformer for Video Instance Segmentation).
 * TeViT is a transformer-based end-to-end video instance segmentation framework. We build our framework upon the query-based instance segmentation methods, i.e., `QueryInst`.
-* We propose messenger shift mechanism in the transformer backbone, as well as spatiotemporal query interaction head in the instance heads. These two designs fully utlizes both frame-level and instance-level temporal context information and obtains strong temporal modeling capacity with negligible extra computational cost.
+* We propose a messenger shift mechanism in the transformer backbone, as well as a spatiotemporal query interaction head in the instance heads. These two designs fully utlizes both frame-level and instance-level temporal context information and obtains strong temporal modeling capacity with negligible extra computational cost.
 
 </br>
 
@@ -33,15 +33,15 @@
 
 Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-[tevit_msgshift](configs/tevit/tevit_msgshift.py) | 46.3 | 70.6 | 50.9 | 45.2 | 54.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.zip)
-[tevit_msgshift_mstrain](configs/tevit/tevit_msgshift_mstrain.py) | 46.9 | 70.1 | 52.9 | 45.0 | 53.4 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.zip)
+[TeViT_MSGShifT](configs/tevit/tevit_msgshift.py) | 46.3 | 70.6 | 50.9 | 45.2 | 54.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.zip)
+[TeViT_MSGShifT_mstrain](configs/tevit/tevit_msgshift_mstrain.py) | 46.9 | 70.1 | 52.9 | 45.0 | 53.4 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.zip)
 * We have conducted multiple runs due to the training instability and checkpoints above are all the best one among multiple runs. The average performances are reported in our paper.
 * Besides basic models, we also provide TeViT with `ResNet-50` and `Swin-L` backbone, models are also trained on `YouTube-VIS-2019` dataset.
 
 Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
 --- |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-[tevit_r50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
-[tevit_swin-l_mstrain](configs/tevit/tevit_swin-l_mstrain.py) | 56.8 | 80.6 | 63.1 | 52.0 | 63.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.zip)
+[TeViT_R50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
+[TeViT_Swin-L_mstrain](configs/tevit/tevit_swin-l_mstrain.py) | 56.8 | 80.6 | 63.1 | 52.0 | 63.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.zip)
 
 * Due to backbone limitations, TeViT models with `ResNet-50` and `Swin-L` backbone are conducted with `STQI Head` only (i.e., without our proposed `messenger shift mechanism`).
 * With `Swin-L` as backbone network, we apply more instance queries (i.e., from 100 to 300) and stronger data augmentation strategies. Both of them can further boost the final performance.
