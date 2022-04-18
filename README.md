@@ -21,9 +21,11 @@
 
 </br>
 
-<div align="center">
+<!-- <div align="center">
   <img width="90%" alt="Overall Arch" src="resources/tevit_vis.png">
-</div>
+</div> -->
+<img src="resources/gif/0b97736357.gif" width="33%"/><img src="resources/gif/00f88c4f0a.gif" width="33%"/><img src="resources/gif/2e21c7e59b.gif" width="33%"/>
+<img src="resources/gif/4b1a561480.gif" width="33%"/><img src="resources/gif/49fcb27427.gif" width="33%"/><img src="resources/gif/91eb6cb6dc.gif" width="33%"/>
 
 </br>
 
