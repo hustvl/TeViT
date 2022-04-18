@@ -9,6 +9,10 @@
 > (<sup>:email:</sup>) corresponding author.
 >
 
+<img src="resources/gif/0b97736357.gif" width="33%"/><img src="resources/gif/00f88c4f0a.gif" width="33%"/><img src="resources/gif/2e21c7e59b.gif" width="33%"/>
+<img src="resources/gif/4b1a561480.gif" width="33%"/><img src="resources/gif/49fcb27427.gif" width="33%"/><img src="resources/gif/91eb6cb6dc.gif" width="33%"/>
+</br>
+
 * This repo provides code, models and training/inference recipes for **TeViT**(Temporally Efficient Vision Transformer for Video Instance Segmentation).
 * TeViT is a transformer-based end-to-end video instance segmentation framework. We build our framework upon the query-based instance segmentation methods, i.e., `QueryInst`.
 * We propose a messenger shift mechanism in the transformer backbone, as well as a spatiotemporal query interaction head in the instance heads. These two designs fully utlizes both frame-level and instance-level temporal context information and obtains strong temporal modeling capacity with negligible extra computational cost.
@@ -24,8 +28,6 @@
 <!-- <div align="center">
   <img width="90%" alt="Overall Arch" src="resources/tevit_vis.png">
 </div> -->
-<img src="resources/gif/0b97736357.gif" width="33%"/><img src="resources/gif/00f88c4f0a.gif" width="33%"/><img src="resources/gif/2e21c7e59b.gif" width="33%"/>
-<img src="resources/gif/4b1a561480.gif" width="33%"/><img src="resources/gif/49fcb27427.gif" width="33%"/><img src="resources/gif/91eb6cb6dc.gif" width="33%"/>
 
 </br>
 
