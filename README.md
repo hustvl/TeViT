@@ -23,13 +23,13 @@
   <img width="100%" alt="Overall Arch" src="resources/tevit.png">
 </div>
 
-</br>
+<!-- </br> -->
 
 <!-- <div align="center">
   <img width="90%" alt="Overall Arch" src="resources/tevit_vis.png">
 </div> -->
 
-</br>
+<!-- </br> -->
 
 ## Models and Main Results
 
