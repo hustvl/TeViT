@@ -1,8 +1,8 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "If you find our paper and code useful in your research, please cite it as below."
 authors:
-  - name: "MMDetection Contributors"
-title: "OpenMMLab Detection Toolbox and Benchmark"
-date-released: 2018-08-22
-url: "https://github.com/open-mmlab/mmdetection"
-license: Apache-2.0
+  - name: "Shusheng Yang, Xinggang Wang, Yu Li, Yuxin Fang, Jiemin Fang, Wenyu Liu, Xun Zhao, Ying Shan"
+title: "Temporally Efficient Vision Transformer for Video Instance Segmentation"
+date-released: 2022-04-19
+url: "https://github.com/hustvl/tevit"
+license: MIT
