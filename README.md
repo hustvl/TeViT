@@ -74,6 +74,11 @@ conda create --name tevit python=3.7.7
 conda activate tevit
 ```
 
+* Install YTVOS Version API from [youtubevos/cocoapi](https://github.com/youtubevos/cocoapi):
+```
+pip install git+https://github.com/youtubevos/cocoapi.git#"egg=pycocotools&subdirectory=PythonAPI
+```
+
 * Install Python requirements
 ```
 torch==1.9.0
