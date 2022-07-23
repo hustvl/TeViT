@@ -16,6 +16,7 @@ from mmdet.apis import init_detector
 from mmdet.core.bbox import bbox_overlaps
 from mmdet.datasets import replace_ImageToTensor
 from mmdet.datasets.pipelines import Compose
+from mmcv.cnn.utils.flops_counter import add_flops_counting_methods, flops_to_string, params_to_string
 
 def parse_args():
     parser = ArgumentParser()
@@ -51,6 +52,7 @@ def main(args):
         args.checkpoint,
         device=args.device,
         cfg_options=args.cfg_options)
+    model = add_flops_counting_methods(model)
     cfg = model.cfg
     anno = json.load(open(args.json))
     test_pipeline = Compose(cfg.data.test.pipeline)
@@ -76,11 +78,16 @@ def main(args):
         datas = scatter(datas, [args.device])[0]
 
         with torch.no_grad():
+            model.start_flops_count()
             (det_bboxes, det_labels), segm_masks = model(
                 return_loss=False,
                 rescale=True,
                 format=False,
                 **datas)
+
+            # _, params_count = model.compute_average_flops_cost()
+            # print(params_to_string(params_count))
+            model.stop_flops_count()
 
         det_bboxes = torch.stack(det_bboxes)
         det_labels = torch.stack(det_labels)

@@ -116,7 +116,7 @@ class TeViT(QueryInst):
                 The outer list corresponds to each image. The inner list
                 corresponds to each class.
         """
-        B, T = img.size(0), 1
+        B, T = 1, img.size(0)
         x = self.extract_feat(B, T, img)
         proposal_boxes, proposal_features, imgs_whwh = \
             self.rpn_head.simple_test_rpn(x, img_metas)
