@@ -35,18 +35,18 @@
 
 * We provide both checkpoints and codalab server submissions on `YouTube-VIS-2019` dataset.
 
-Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
---- |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-[TeViT_MsgShifT](configs/tevit/tevit_msgshift.py) | 46.3 | 70.6 | 50.9 | 45.2 | 54.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.zip)
-[TeViT_MsgShifT_MST](configs/tevit/tevit_msgshift_mstrain.py) | 46.9 | 70.1 | 52.9 | 45.0 | 53.4 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.zip)
+Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | Params | model | submission
+--- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+[TeViT_MsgShifT](configs/tevit/tevit_msgshift.py) | 46.3 | 70.6 | 50.9 | 45.2 | 54.3 | 161.83 M | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift.zip)
+[TeViT_MsgShifT_MST](configs/tevit/tevit_msgshift_mstrain.py) | 46.9 | 70.1 | 52.9 | 45.0 | 53.4 | 161.83 M | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_msgshift_mstrain.zip)
 * We have conducted multiple runs due to the training instability and checkpoints above are all the best one among multiple runs. The average performances are reported in our paper.
 * Besides basic models, we also provide TeViT with `ResNet-50` and `Swin-L` backbone, models are also trained on `YouTube-VIS-2019` dataset.
 * MST denotes multi-scale traning.
 
-Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | model | submission
---- |:---:|:---:|:---:|:---:|:---:|:---:|:---:
-[TeViT_R50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
-[TeViT_Swin-L_MST](configs/tevit/tevit_swin-l_mstrain.py) | 56.8 | 80.6 | 63.1 | 52.0 | 63.3 | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.zip)
+Name | AP | AP@50 | AP@75 | AR@1 | AR@10 | Params | model | submission
+--- |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:
+[TeViT_R50](configs/tevit/tevit_r50.py) | 42.1 | 67.8 | 44.8 | 41.3 | 49.9 | 172.3 M | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_r50.zip)
+[TeViT_Swin-L_MST](configs/tevit/tevit_swin-l_mstrain.py) | 56.8 | 80.6 | 63.1 | 52.0 | 63.3 | 343.86 M | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.pth) | [link](https://github.com/hustvl/Storage/releases/download/v1.1.0/tevit_swin-l_mstrain.zip)
 
 * Due to backbone limitations, TeViT models with `ResNet-50` and `Swin-L` backbone are conducted with `STQI Head` only (i.e., without our proposed `messenger shift mechanism`).
 * With `Swin-L` as backbone network, we apply more instance queries (i.e., from 100 to 300) and stronger data augmentation strategies. Both of them can further boost the final performance.
